@@ -10,7 +10,11 @@ X = np.arange(0,5,0.1)
 cosx  = np.cos(X)
 dcosx = -np.sin(X)
 
-x = tf.Variable(initial_value=3.0)
+"""
+This is a new line.
+"""
+
+x = tf.Variable(initial_value=1.0) # changes to the same line
 y = tf.cos(x)
 
 
