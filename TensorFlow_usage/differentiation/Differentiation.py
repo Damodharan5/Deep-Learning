@@ -6,20 +6,17 @@ A simple derivative finder using tensorflow and validate the same thing using Te
 import tensorflow as tf
 import numpy as np
 
-X = np.arange(0,5,0.1)
-cosx  = np.cos(X)
+test = "this is a test"
+
+X = np.arange(0, 5, 0.1)
+cosx = np.cos(X)
 dcosx = -np.sin(X)
 
-"""
-This is a new line.
-"""
-
-x = tf.Variable(initial_value=1.0) # changes to the same line
+x = tf.Variable(initial_value=2.0)
 y = tf.cos(x)
 
 
 train = tf.train.GradientDescentOptimizer(0.01).minimize(y)
 with tf.Session() as sess:
-	writer = tf.summary.FileWriter('logs',sess.graph)
-	writer.close()
-
+    writer = tf.summary.FileWriter("logs", sess.graph)
+    writer.close()
